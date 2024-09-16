@@ -1,0 +1,47 @@
+### Create new User
+
+POST http://localhost:3000/auth/sing-in
+content-type:application/json
+
+{
+    "email":"kaung@gmails.com",
+    "password":"testing1"
+}
+
+###sing-up
+POST http://localhost:3000/auth/sing-up
+content-type:application/json
+
+{
+    "email":"kaung@gmails.com",
+    "password":"testing1"
+}
+
+###Get current user
+GET http://localhost:3000/auth/whoami
+
+###Sign out
+POST http://localhost:3000/auth/sign-out
+
+###find a particular user with the given id
+GET http://localhost:3000/auth/1
+
+###find all users with the given email
+GET http://localhost:3000/auth?email=kaung@gmail.com
+
+###delete user with the given id 
+DELETE http://localhost:3000/auth/3
+
+### update user with the id
+PATCH http://localhost:3000/auth/4
+content-type:application/json
+
+{
+    "password":"testing password"
+}
+
+### set colors
+GET http://localhost:3000/auth/colors/blue
+
+###get colors
+GET http://localhost:3000/auth/colors
